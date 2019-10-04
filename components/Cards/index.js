@@ -50,9 +50,14 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
 
             }
         }
+                if (className == "ALL"){
+                    for (let i = 0; i < eachitem.length; i++){
+                        cards(eachitem[i]);
+                        cardsContainer.appendChild(cards(eachitem[i]));
+                }
     }
         
-    })
+    }})
 })
 
 
