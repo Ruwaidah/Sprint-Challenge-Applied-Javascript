@@ -37,6 +37,9 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
         console.log(keys)
         
             topic.addEventListener("click", (event) => {
+                while (cardsContainer.firstChild) {
+                    cardsContainer.removeChild(cardsContainer.firstChild);
+                  }
                 for (var item in article) {
                     let eachitem = article[item];
                 let className = event.target.classList[1];
@@ -56,12 +59,6 @@ axios.get("https://lambda-times-backend.herokuapp.com/articles")
 
 
 function cards(obj) {
-    let m12 = document.querySelector(".card");
-    let arra = Array.from(m12)
-    if ( m12.length >0 ){
-        console.log("12131")
-        element.parentNode.removeChild(element)
-    }
 
     // console.log(obj)
     const card = document.createElement("div");

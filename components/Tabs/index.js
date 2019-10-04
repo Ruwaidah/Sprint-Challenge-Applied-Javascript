@@ -30,7 +30,11 @@ axios.get("https://lambda-times-backend.herokuapp.com/topics")
 
 function topics(item) {
     const tab = document.createElement("div");
-        tab.classList.add("tab", item);
+        if (item == "node.js") {
+            tab.classList.add("tab", "node");
+        } 
+        else
+            tab.classList.add("tab", item);
         tab.textContent = item;
         console.log(tab)
     return tab
